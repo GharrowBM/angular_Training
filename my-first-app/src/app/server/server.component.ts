@@ -8,4 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServerComponent {
   serverId: number = 10;
   serverStatus: boolean = true;
+
+  getServerStatus() {
+    return this.serverStatus ? "Online" : "Offline";
+  }
 }

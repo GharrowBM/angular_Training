@@ -1,0 +1,7 @@
+<h3>Exercice 3</h3>
+
+<button class="btn btn-primary" (click)="onToggleDisplaySecrets()">Display Details</button>
+<p *ngIf="secretDisplay">Secret Password = tuna</p>
+<div *ngFor="let item of logs; let i = index"
+    [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+     [ngClass]="{'text-white': i >= 4}">{{item}}</div>

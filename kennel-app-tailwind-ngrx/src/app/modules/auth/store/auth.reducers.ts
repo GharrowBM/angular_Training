@@ -14,12 +14,14 @@ const initialState: AuthState = {
 export const authReducer = createReducer<AuthState>(
     initialState,
     on(AuthActions.signUpSuccess, (state, {idToken}) => {
+        localStorage.setItem('token', idToken)
         return {
             ...state,
             token: idToken
         }
     }),
     on(AuthActions.signInSuccess, (state, {idToken}) => {
+        localStorage.setItem('token', idToken)
         return {
             ...state,
             token : idToken

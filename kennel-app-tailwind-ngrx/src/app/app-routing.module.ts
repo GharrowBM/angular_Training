@@ -4,7 +4,7 @@ import { AuthGuard } from './modules/auth/auth.guard';
 
 const routes: Routes = [
   // Main Route
-  {path: '', pathMatch: 'full', redirectTo: 'auth'},
+  {path: '', pathMatch: 'full', redirectTo: 'dogs'},
 
   // Dogs Feature
   {path:'dogs', canActivate: [AuthGuard], canActivateChild: [AuthGuard], loadChildren: () => import('./modules/dogs/dogs.module').then(m => m.DogsModule)},

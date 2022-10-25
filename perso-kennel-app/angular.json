@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kennel-app-tailwind-ngrx": {
+    "perso-kennel-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kennel-app-tailwind-ngrx",
+            "outputPath": "dist/perso-kennel-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "kennel-app-tailwind-ngrx:build:production"
+              "browserTarget": "perso-kennel-app:build:production"
             },
             "development": {
-              "browserTarget": "kennel-app-tailwind-ngrx:build:development"
+              "browserTarget": "perso-kennel-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kennel-app-tailwind-ngrx:build"
+            "browserTarget": "perso-kennel-app:build"
           }
         },
         "test": {
@@ -103,8 +103,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "f04e63e3-8d1c-4f12-8630-69a500cf23fe"
   }
 }
